@@ -226,39 +226,46 @@
 	
 	
 	// Footer Gallery Carousel
-	if ($('.footer-gallery-carousel').length) {
-		$('.footer-gallery-carousel').owlCarousel({
-			loop:true,
-			margin:15,
-			nav:true,
-			smartSpeed: 700,
-			autoplay: 5000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:2
-				},
-				600:{
-					items:3
-				},
-				800:{
-					items:3
-				},
-				1024:{
-					items:4
-				},
-				1200:{
-					items:5
-				},
-				1400:{
-					items:5
-				},
-				1600:{
-					items:5
-				}
-			}
-		});    		
-	}
+// Footer Gallery Carousel
+if ($('.footer-gallery-carousel').length) {
+    $('.footer-gallery-carousel').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        smartSpeed: 2000,  // Speed of the transition
+        autoplay: true,    // Enable autoplay
+        autoplayTimeout: 5000,  // Delay between slides in milliseconds
+        autoplayHoverPause: true,  // Pause on mouse hover
+        navText: [
+            '<span class="fa fa-angle-left"></span>',
+            '<span class="fa fa-angle-right"></span>'
+        ],
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            800: {
+                items: 3
+            },
+            1024: {
+                items: 4
+            },
+            1200: {
+                items: 5
+            },
+            1400: {
+                items: 5
+            },
+            1600: {
+                items: 5
+            }
+        }
+    });
+}
+
 	
 	
 	
