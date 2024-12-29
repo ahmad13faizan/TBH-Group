@@ -55,12 +55,12 @@
 		
 		//Disable dropdown parent link
 		$('.navigation li.dropdown > a').on('click', function(e) {
-			e.preventDefault();
+			
 		});
 		
 		//Disable dropdown parent link
 		$('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function(e) {
-			e.preventDefault();
+			
 		});
 		
 	}
@@ -344,7 +344,7 @@ if ($('.footer-gallery-carousel').length) {
 	//Product Tabs
 	if($('.project-tab').length){
 		$('.project-tab .product-tab-btns .p-tab-btn').on('click', function(e) {
-			e.preventDefault();
+		
 			var target = $($(this).attr('data-tab'));
 			
 			if ($(target).hasClass('actve-tab')){
@@ -602,7 +602,7 @@ if ($('.footer-gallery-carousel').length) {
 	// Tabs Box
 	if($('.tabs-box').length){
 		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
-			e.preventDefault();
+			
 			var target = $($(this).attr('data-tab'));
 			
 			if ($(target).is(':visible')){

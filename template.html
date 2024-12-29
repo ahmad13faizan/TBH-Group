@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="TBH Group || Homepage">
+    <meta name="author" content="Your Name">
+
+    <title>TBH Group || Template</title>
+
+    <!-- Stylesheets -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <!-- Color Switcher Mockup -->
+    <link href="assets/css/color-switcher-design.css" rel="stylesheet">
+
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="assets/css/color-themes/default-color.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+
+    <!-- Custom CSS for Gallery -->
+    <style>
+        /* General Body and Gallery Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .header-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgb(242,190,0);
+            color: #fff;
+        }
+
+        .header-section h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 18px;
+        }
+
+        .gallery-section {
+            padding: 80px 20px;
+            background-color: #fff;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay a {
+            color: #fff;
+            font-size: 22px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #2e6da4;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .gallery-item .overlay a:hover {
+            background-color: #4a90e2;
+        }
+
+        .image-title {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="hidden-bar-wrapper">
+
+    <div class="page-wrapper">
+ 	
+        <!-- Preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">x</div>
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="spinner"></div>
+                        <div class="txt-loading">
+                            <span data-text-preloader="T" class="letters-loading">
+                                T
+                            </span>
+                            <span data-text-preloader="B" class="letters-loading">
+                                B
+                            </span>
+                            <span data-text-preloader="H&NonBreakingSpace;" class="letters-loading">
+                                H
+                            </span>
+                            <span data-text-preloader="G" class="letters-loading">
+                                G
+                            </span>
+                            <span data-text-preloader="RO" class="letters-loading">
+                                RO
+                            </span>
+                            <span data-text-preloader="UP" class="letters-loading">
+                                UP
+                            </span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- Preloader End -->
+         
+         <!-- Header Style One / Two -->
+        <header class="main-header header-style-two">
+            
+            <!-- Header Top Two -->
+            <div class="header-top-two">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <!-- Top Left -->
+                        <div class="top-left clearfix">
+                            
+                            <ul class="info-links">
+                                <li><span class="icon flaticon-call"></span> PH: <a href="tel:+91 8178218199">+91 8178218199</a></li>
+                                <li><span class="icon flaticon-email-2"></span>Email: <a href="mailto:">grouptbhindia@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Top Right -->
+                        <div class="top-right pull-right clearfix">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li class="follow">Follow us:</li>
+                                <li><a href="https://wa.me/6383095135" target="_blank" class="fa fa-whatsapp"></a></li>
+                                <li><a href="https://www.instagram.com/tbh_group_?igsh=a2QycWQyZWdqcWsy/" target="_blank" class="fa fa-instagram"></a></li>
+                                <li><a href="https://www.linkedin.com/company/tbh-group-of-infrastructure//" target="_blank" class="fa fa-linkedin"></a></li>
+                                <li><a href="mailto:tbhgroupindiainfo@gmail.com" target="_blank" class="fa fa-envelope"></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        
+                        <div class="pull-left logo-box">
+                            <div class="logo"><a href="index-2.html"><img src="assets/images/logo-3.png" alt="" title=""></a></div>
+                        </div>
+                        
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-md">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->    	
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                
+                                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li class="curren dropdown"><a href="home.html">Home</a>
+                                        </li>
+                                        <li class="dropdown"><a href="about.html">About us</a>
+                                            
+                                        </li>
+                                        <li class="dropdown"><a href="#">Services</a>
+                                            <ul>
+                                                <li><a>Services</a></li>
+                                                <li><a>Accurate Measurements</a></li>
+                                                <li><a>Solid Waste Removal </a></li>
+                                                <li><a>Warranty Service</a></li>
+                                                <li><a>Project Planning</a></li>
+                                                <li><a>Constant Maintenance</a></li>
+                                                <li><a>Qualified Specialists</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Request a Service</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="dropdown"><a href="#">Blog</a>
+                                            
+                                        </li>
+                                        <li class="dropdown"><a href="#">Contact</a>
+                                            <ul>
+                                                <li><a href="tel:+918887268152">Call +918887268152</a></li>
+                                                <li><a href="tel:+916383095135">Call +916383095135</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            
+                            <!-- Main Menu End-->
+                            <div class="outer-box clearfix">
+                                
+                                <!--Location-Company-->>	
+								<a href="https://www.google.com/maps?q=28.558530,77.410548" target="_blank" title="TBH Group- Headquarters" style="margin-left: 100px;">
+									<i class="fas fa-map-marker-alt" style="margin: auto; align-self: unset; font-size:42px;color:red;"></i>
+								</a>
+                                
+                                <!-- Search Btn -->
+                                <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+                                
+                                <!-- Nav Btn -->
+                                <div class="nav-btn navSidebar-button"><span class="icon flaticon-menu-2"></span></div>
+                                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index-2.html" title=""><img src="assets/images/logo-small.png" alt="" title=""></a>
+                    </div>
+                    <!--Right Col-->
+                    <div class="pull-right">
+                    
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                        <!-- Mobile Navigation Toggler -->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                        
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+        
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+                
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo-small.png" alt="" title=""></a></div>
+                    <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                </nav>
+            </div><!-- End Mobile Menu -->
+        
+        </header>
+        <!-- End Main Header -->
+
+        
+        <!--main area-->>
+        <h1>Edit here</h1><br><br><br><br>
+        
+        <!-- Sidebar Cart Item -->
+        <div class="xs-sidebar-group info-group">
+            <div class="xs-overlay xs-bg-black"></div>
+            <div class="xs-sidebar-widget">
+                <div class="sidebar-widget-container">
+                    <div class="widget-heading">
+                        <a href="#" class="close-side-widget">
+                            X
+                        </a>
+                    </div>
+                    <div class="sidebar-textwidget">
+                        
+                        <!-- Sidebar Info Content -->
+                        <div class="sidebar-info-contents">
+                            <div class="content-inner">
+                                <div class="logo">
+                                    <a href="index-2.html"><img src="assets/images/logo-2.png" alt="" /></a>
+                                </div>
+                                <div class="content-box">
+                                    <h4>About Us</h4>
+								<p class="text">Whenever you employ the Consulting Process, whenever you reach a review stage, your focus will be on evaluating and discussing the content rather than the design..</p>
+							</div>
+							<div class="contact-info">
+								<h4>Contact Info</h4>
+								<ul class="list-style-one">
+									<li><span class="icon fa fa-location-arrow"></span>
+										<a href="https://www.google.com/maps?q=28.558530,77.410548" target="_blank" title="TBH Group- Headquarters">Vill - Bhend District, Jalaun, Uttar Pradesh 
+									sector 112 Noida Delhi NCR</a></li>
+									<li><span class="icon fa fa-phone"></span><a href="tel:+918178218199">(+91) 8178218199</a></li>
+									<li><span class="icon fa fa-envelope"><a href="mailto:grouptbhindia@gmail.com"></span>grouptbhindia@gmail.com</a></li>
+                                        <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 AM to 6.00 PM Sunday: Closed</li>
+                                    </ul>
+                                </div>
+                                <!-- Social Box -->
+                                <ul class="social-box">
+                                    <li><a href="https://wa.me/6383095135" target="_blank" class="fa fa-whatsapp"></a></li>
+                                    <li><a href="https://www.instagram.com/tbh_group_?igsh=a2QycWQyZWdqcWsy/" target="_blank" class="fa fa-instagram"></a></li>
+                                    <li><a href="https://www.linkedin.com/company/tbh-group-of-infrastructure//" target="_blank" class="fa fa-linkedin"></a></li>
+                                    <li><a href="mailto:tbhgroupindiainfo@gmail.com" target="_blank" class="fa fa-envelope"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END sidebar widget item -->
+        
+       
+        
+        
+        <!-- Main Footer -->
+        <footer class="footer-style-two" style="background-image:url(assets/images/background/10.jpg)">
+            <div class="auto-container">
+                
+                <!-- Widgets Section -->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+                        
+                        <!-- Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+                                
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget logo-widget">
+                                        <div class="widget-content">
+                                            <div class="logo">
+                                                <a href="index-2.html"><img src="assets/images/logo-2.png" alt="" /></a>
+                                            </div>
+                                            <div class="text">There are many variation passages of lorem ipsum but the majority .</div>
+                                            <!-- Social Box -->
+                                            <ul class="social-box">
+                                                <li><a href="https://wa.me/6383095135" target="_blank" class="fa fa-whatsapp"></a></li>
+                                                <li><a href="https://www.instagram.com/tbh_group_?igsh=a2QycWQyZWdqcWsy/" target="_blank" class="fa fa-instagram"></a></li>
+                                                <li><a href="https://www.linkedin.com/company/tbh-group-of-infrastructure//" target="_blank" class="fa fa-linkedin"></a></li>
+                                                <li><a href="mailto:tbhgroupindiainfo@gmail.com" target="_blank" class="fa fa-envelope"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget links-widget">
+                                        <h5>Quick Links</h5>
+                                        <ul class="list-link">
+                                            <li><a href="warranty-service.html">Home</a></li>
+                                            <li><a href="warranty-service.html">Our Company</a></li>
+                                            <li><a href="gallery.html">Gallery of Projects</a></li>
+                                            <li><a href="warranty-service.html">Request Quote</a></li>
+                                            <li><a href="warranty-service.html">Send a Message</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+                                
+                                <!-- Footer Column -->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget links-widget">
+                                        <h5>Our Services</h5>
+                                        <ul class="list-link">
+                                            <li><a href="warranty-service.html">Roofing</a></li>
+                                            <li><a href="warranty-service.html">Standing Seam Metal</a></li>
+                                            <li><a href="warranty-service.html">Metal Wall Panels</a></li>
+                                            <li><a href="warranty-service.html">Residential Siding</a></li>
+                                            <li><a href="warranty-service.html">Gutters & Downspouts</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Footer Bottom -->
+    <footer class="footer-bottom" style="padding: 30px 0px 35px;">
+        <div class="auto-container">
+            <div class="copyright">
+                <p>
+                    &copy; 2024 TBHGroup <br> 
+                    || Designed by <strong>OsmanoTech</strong>
+                </p>
+                <p>
+                    <a 
+                        class="fa fa-whatsapp" 
+                        href="https://api.whatsapp.com/send?phone=+919307126889&text=Hello%20sir%20I%20had%20a%20query%20about%20a%20website%20project" 
+                        target="_blank" 
+                        aria-label="Contact us on WhatsApp"
+                        title="Contact us on WhatsApp"
+                    >
+                        WhatsApp
+                    </a> &nbsp; 
+                    <a 
+                        class="fa fa-phone" 
+                        href="tel:+919307126889" 
+                        aria-label="Call us at +91-9307126889"
+                        title="Call us"
+                    >
+                        Call Us
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+    
+        
+    </div>
+    <!-- End PageWrapper -->
+    
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <button class="close-search style-two"><span class="flaticon-cancel-1"></span></button>
+        <button class="close-search"><span class="flaticon-up-arrow"></span></button>
+        <form method="post" action="https://uniqthemes.com/html/bricks/blog.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i target="_blank" class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Header Search -->
+    
+    <!-- Color Palate / Color Switcher -->
+    <div class="color-palate">
+        <div class="color-trigger">
+            <i target="_blank" class="fa fa-gear"></i>
+        </div>
+        <div class="color-palate-head">
+            <h6>Choose Layout</h6>
+        </div>
+        
+        <div class="various-color clearfix">
+            <div class="colors-list">
+                <span class="palate default-color active" data-theme-file="assets/css/color-themes/default-color.css"></span>
+                <span class="palate green-color" data-theme-file="assets/css/color-themes/green-color.css"></span>
+                <span class="palate olive-color" data-theme-file="assets/css/color-themes/blue-color.css"></span>
+                <span class="palate orange-color" data-theme-file="assets/css/color-themes/orange-color.css"></span>
+                <span class="palate purple-color" data-theme-file="assets/css/color-themes/purple-color.css"></span>
+                <span class="palate teal-color" data-theme-file="assets/css/color-themes/teal-color.css"></span>
+                <span class="palate brown-color" data-theme-file="assets/css/color-themes/brown-color.css"></span>
+                <span class="palate yellow-color" data-theme-file="assets/css/color-themes/yellow-color.css"></span>
+            </div>
+        </div>
+        
+        <h6>RTL Version</h6>
+        <ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li> </ul>
+        <h6>Boxed Version</h6>
+        <ul class="box-version option-box"> <li class="box">Boxed</li> <li>Full width</li></ul>
+        <h6>Want Sticky Header</h6>
+        <ul class="header-version option-box"> <li class="box">No</li> <li>Yes</li></ul>
+        
+    </div>
+    
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span target="_blank" class="fa fa-arrow-up"></span></div>
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/tilt.jquery.min.js"></script>
+    <script src="assets/js/jquery.paroller.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/mixitup.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/color-settings.js"></script>
+
+</body>
+
+</html>
